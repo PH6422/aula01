@@ -1,103 +1,100 @@
+# 🧮 Calculadora Interativa em Python (com Validação de Entrada)
 
-````markdown
-# 🧮 Calculadora Avançada em Python
+Este projeto é uma **calculadora em Python executada no terminal**, com foco em **validação de dados**, **tratamento de erros** e **interatividade**.
 
-Este projeto é uma **calculadora interativa em Python executada no terminal**, que permite realizar operações matemáticas básicas e aplicar **modificações nos números antes do cálculo**, além de manter um **histórico das operações realizadas**.
+Diferente de versões mais simples, este programa garante que o usuário insira apenas valores válidos, evitando falhas durante a execução.
 
 ---
 
-# 📋 Funcionalidades
+## 📋 Funcionalidades
 
-✔ Operações matemáticas básicas  
+### 🔢 Operações matemáticas
 - Soma (`+`)
 - Subtração (`-`)
 - Multiplicação (`*`)
 - Divisão (`/`)
 
-✔ Modificação dos números antes do cálculo  
-- Raiz quadrada  
-- Potência  
-- Porcentagem  
+### 🛠 Modificação dos números
+Antes do cálculo, é possível alterar os valores:
+- Raiz quadrada
+- Potência
+- Porcentagem
 
-✔ Cálculo encadeado  
-- O resultado de uma operação pode ser usado como **primeiro número da próxima operação**
+### 🔄 Cálculo contínuo
+- O resultado pode ser reutilizado como próximo valor
+- Permite várias operações em sequência
 
-✔ Histórico de cálculos  
-- Visualização do histórico
-- Opção de **limpar histórico**
+### 📜 Histórico
+- Armazena todas as operações realizadas
+- Opção de limpar o histórico
 
-✔ Menu interativo no terminal
+### ✅ Validação de entrada
+- Impede entrada de valores inválidos
+- Garante operadores corretos
+- Verifica respostas como `s/n`
+- Trata erros com `try/except`
 
 ---
 
-# ⚙️ Tecnologias utilizadas
+## ⚙️ Tecnologias utilizadas
 
 - **Python 3**
-- Estrutura de repetição `while`
-- Estrutura de decisão `match case`
+- Estrutura `while`
+- Estrutura `match case`
+- Tratamento de exceções (`try/except`)
 - Listas (`list`)
 - Entrada de dados com `input()`
-- Operações matemáticas básicas
 
 ---
 
-# 📂 Estrutura do Programa
+## 🧠 Diferenciais do projeto
 
-O programa possui um **menu principal** com três opções:
+✔ Tratamento de erro para números inválidos  
+✔ Validação completa de entradas do usuário  
+✔ Fluxo de uso mais seguro e controlado  
+✔ Estrutura organizada com múltiplos loops  
+
+---
+
+## 📂 Estrutura do Programa
+
+Menu principal:
 
 | Opção | Função |
 |------|------|
-| 1 | Realizar cálculos |
+| 1 | Iniciar cálculo |
 | 2 | Ver histórico |
 | 3 | Finalizar programa |
 
-Durante o cálculo o usuário pode:
-
-1. Inserir dois números
-2. Escolher um operador matemático
-3. Modificar qualquer um dos números com:
-   - Raiz quadrada
-   - Potência
-   - Porcentagem
-4. Continuar calculando usando o **resultado anterior**
+Durante o cálculo:
+1. O usuário insere o primeiro número
+2. Escolhe o operador
+3. Insere o segundo número
+4. Pode modificar os números
+5. Visualiza o resultado
+6. Decide continuar ou encerrar
 
 ---
 
-# ▶️ Como executar
+## ▶️ Como executar
 
-## 1️⃣ Clonar o repositório
+### 1️⃣ Clonar o repositório
 
 ```bash
 git clone https://github.com/seu-usuario/seu-repositorio.git
-````
-
-## 2️⃣ Entrar na pasta do projeto
-
-```bash
+2️⃣ Entrar na pasta
 cd seu-repositorio
-```
-
-## 3️⃣ Executar o programa
-
-```bash
+3️⃣ Executar o programa
 python main.py
-```
-
----
-
-# 💻 Exemplo de uso
-
-```
+💻 Exemplo de uso
 Insira a ação que deseja realizar:
-1 - Calcular
-2 - Historico
-3 - Finalizar
+1-Calcular, 2-Historico, 3-Finalizar
 
 1
 
-Insira o primeiro digito: 9
-Insira o operador: +
-9 + 3
+Insira o primero digito: 10
+Insira o operador: *
+10 * 2
 
 Deseja modificar o primeiro numero? s/n
 n
@@ -105,31 +102,34 @@ n
 Deseja modificar o segundo numero? s/n
 n
 
-9 + 3 = 12
-```
+10 * 2 = 20
+⚠️ Tratamento de erros
 
----
+O programa lida com erros como:
 
-# 🗂 Exemplo de histórico
+Entrada de letras no lugar de números
 
-```
-[9, '+', 3, '=', 12, '||', 12, '*', 2, '=', 24, '||']
-```
+Operadores inválidos
 
----
+Respostas diferentes de s ou n
 
-# 🚀 Possíveis melhorias
+Exemplo:
 
-* Tratar erros de entrada do usuário
-* Evitar divisão por zero
-* Melhorar a exibição do histórico
-* Salvar histórico em arquivo `.txt`
-* Criar interface gráfica
+Erro: valor inserido não é um numero
+🗂 Exemplo de histórico
+[10, '*', 2, '=', 20, '||', 20, '+', 5, '=', 25, '||']
+🚀 Melhorias futuras
 
----
+Evitar divisão por zero
 
-# 👨‍💻 Autor
+Melhorar visual do histórico
 
-Projeto desenvolvido para **prática de lógica de programação em Python**.
+Interface gráfica (GUI)
 
-```
+Salvar histórico em arquivo
+
+Refatorar código em funções
+
+👨‍💻 Autor
+
+Projeto desenvolvido para prática de lógica de programação e tratamento de erros em Python.
