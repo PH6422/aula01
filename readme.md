@@ -1,135 +1,145 @@
-# 🧮 Calculadora Interativa em Python (com Validação de Entrada)
+# 🧮 Calculadora e Conversor Numérico em Python
 
-Este projeto é uma **calculadora em Python executada no terminal**, com foco em **validação de dados**, **tratamento de erros** e **interatividade**.
+Este projeto é uma aplicação em Python executada no terminal que combina:
 
-Diferente de versões mais simples, este programa garante que o usuário insira apenas valores válidos, evitando falhas durante a execução.
+✔ Calculadora interativa  
+✔ Conversor entre sistemas numéricos  
+✔ Histórico de operações  
+✔ Validação completa de entrada  
 
 ---
 
-## 📋 Funcionalidades
+# 📋 Funcionalidades
 
-### 🔢 Operações matemáticas
+## 🔢 Calculadora
 - Soma (`+`)
 - Subtração (`-`)
 - Multiplicação (`*`)
 - Divisão (`/`)
 
 ### 🛠 Modificação dos números
-Antes do cálculo, é possível alterar os valores:
 - Raiz quadrada
 - Potência
 - Porcentagem
 
 ### 🔄 Cálculo contínuo
-- O resultado pode ser reutilizado como próximo valor
-- Permite várias operações em sequência
-
-### 📜 Histórico
-- Armazena todas as operações realizadas
-- Opção de limpar o histórico
-
-### ✅ Validação de entrada
-- Impede entrada de valores inválidos
-- Garante operadores corretos
-- Verifica respostas como `s/n`
-- Trata erros com `try/except`
+- Permite usar o resultado como base para novos cálculos
 
 ---
 
-## ⚙️ Tecnologias utilizadas
+## 🔄 Conversor de Bases Numéricas
+
+Conversões entre:
+
+| Tipo | Descrição |
+|------|--------|
+| Decimal | Base 10 |
+| Binário | Base 2 |
+| Octal | Base 8 |
+| Hexadecimal | Base 16 |
+
+### 🔁 Conversões disponíveis
+- Decimal → Binário / Octal / Hexadecimal  
+- Binário → Decimal / Octal / Hexadecimal  
+- Octal → Decimal / Binário / Hexadecimal  
+- Hexadecimal → Decimal / Binário / Octal  
+
+---
+
+## 📜 Histórico
+
+- Armazena todas as operações realizadas na calculadora
+- Permite:
+  - Visualizar histórico
+  - Limpar histórico
+
+---
+
+## ✅ Validação de Entrada
+
+O programa possui diversas validações para evitar erros:
+
+- Números inválidos (`try/except`)
+- Operadores incorretos
+- Opções de menu inválidas
+- Respostas diferentes de `s/n`
+- Verificação de números binários válidos
+
+---
+
+# ⚙️ Tecnologias utilizadas
 
 - **Python 3**
 - Estrutura `while`
 - Estrutura `match case`
 - Tratamento de exceções (`try/except`)
 - Listas (`list`)
-- Entrada de dados com `input()`
+- Manipulação de strings
 
 ---
 
-## 🧠 Diferenciais do projeto
-
-✔ Tratamento de erro para números inválidos  
-✔ Validação completa de entradas do usuário  
-✔ Fluxo de uso mais seguro e controlado  
-✔ Estrutura organizada com múltiplos loops  
-
----
-
-## 📂 Estrutura do Programa
+# 📂 Estrutura do Menu
 
 Menu principal:
 
 | Opção | Função |
 |------|------|
-| 1 | Iniciar cálculo |
-| 2 | Ver histórico |
-| 3 | Finalizar programa |
-
-Durante o cálculo:
-1. O usuário insere o primeiro número
-2. Escolhe o operador
-3. Insere o segundo número
-4. Pode modificar os números
-5. Visualiza o resultado
-6. Decide continuar ou encerrar
+| 1 | Calculadora |
+| 2 | Histórico |
+| 3 | Conversão de bases |
+| 4 | Finalizar |
 
 ---
 
-## ▶️ Como executar
+# ▶️ Como executar
 
-### 1️⃣ Clonar o repositório
+## 1️⃣ Clonar o repositório
 
 ```bash
 git clone https://github.com/seu-usuario/seu-repositorio.git
-2️⃣ Entrar na pasta
+2️⃣ Acessar a pasta
 cd seu-repositorio
 3️⃣ Executar o programa
 python main.py
-💻 Exemplo de uso
-Insira a ação que deseja realizar:
-1-Calcular, 2-Historico, 3-Finalizar
+💻 Exemplos de uso
+🧮 Calculadora
+Insira a ação:
+1-Calcular
 
-1
+Insira o primeiro digito: 10
+Insira o operador: +
+10 + 5
 
-Insira o primero digito: 10
-Insira o operador: *
-10 * 2
+10 + 5 = 15
+🔄 Conversão
+Tipo do número:
+1-Decimal
 
-Deseja modificar o primeiro numero? s/n
-n
+Número: 10
 
-Deseja modificar o segundo numero? s/n
-n
+Converter para:
+2-Binário
 
-10 * 2 = 20
-⚠️ Tratamento de erros
-
-O programa lida com erros como:
-
-Entrada de letras no lugar de números
-
-Operadores inválidos
-
-Respostas diferentes de s ou n
-
-Exemplo:
-
-Erro: valor inserido não é um numero
+Resultado: 1010
 🗂 Exemplo de histórico
-[10, '*', 2, '=', 20, '||', 20, '+', 5, '=', 25, '||']
-🚀 Melhorias futuras
-
+[10, '+', 5, '=', 15, '||', 15, '*', 2, '=', 30, '||']
+🚀 Possíveis melhorias
 Evitar divisão por zero
-
-Melhorar visual do histórico
-
-Interface gráfica (GUI)
-
+Melhorar interface do terminal
+Criar interface gráfica (GUI)
 Salvar histórico em arquivo
+Organizar código em funções
+Adicionar testes automatizados
+🧠 Objetivo do projeto
 
-Refatorar código em funções
+Este projeto foi desenvolvido para praticar:
 
+Lógica de programação
+Estruturas de repetição
+Estruturas condicionais
+Manipulação de números
+Conversão entre bases numéricas
+Tratamento de erros
 👨‍💻 Autor
 
-Projeto desenvolvido para prática de lógica de programação e tratamento de erros em Python.
+Projeto desenvolvido para estudo de Python e algoritmos.
