@@ -1,29 +1,45 @@
-# 🧮 Calculadora e Conversor Numérico em Python
+# 🧮 Calculadora Modular + Conversor de Bases em Python
 
 Este projeto é uma aplicação em Python executada no terminal que combina:
 
-✔ Calculadora interativa  
-✔ Conversor entre sistemas numéricos  
-✔ Histórico de operações  
-✔ Validação completa de entrada  
+- 🧮 Calculadora avançada com modificadores
+- 🔄 Conversor entre bases numéricas
+- 📜 Histórico de operações
+- 🧩 Estrutura modular com separação de responsabilidades
+
+---
+
+# 📁 Estrutura do Projeto
+
+
+📦 projeto
+┣ 📜 main.py # Código principal (interface e menu)
+┣ 📜 calculos.py # Funções de cálculo e conversão
+┗ 📜 README.md
+
 
 ---
 
 # 📋 Funcionalidades
 
-## 🔢 Calculadora
+## 🧮 Calculadora Avançada
+
+### Operações básicas:
 - Soma (`+`)
 - Subtração (`-`)
 - Multiplicação (`*`)
 - Divisão (`/`)
 
-### 🛠 Modificação dos números
-- Raiz quadrada
-- Potência
-- Porcentagem
+### 🛠 Modificadores (antes do cálculo)
 
-### 🔄 Cálculo contínuo
-- Permite usar o resultado como base para novos cálculos
+| Símbolo | Função |
+|--------|------|
+| `**` | Potência |
+| `\|` | Raiz quadrada |
+| `%` | Porcentagem |
+| `Enter` | Sem modificação |
+
+✔ Os modificadores são aplicados **antes da operação principal**
 
 ---
 
@@ -31,71 +47,63 @@ Este projeto é uma aplicação em Python executada no terminal que combina:
 
 Conversões entre:
 
-| Tipo | Descrição |
-|------|--------|
-| Decimal | Base 10 |
-| Binário | Base 2 |
-| Octal | Base 8 |
-| Hexadecimal | Base 16 |
+- Decimal
+- Binário
+- Octal
+- Hexadecimal
 
-### 🔁 Conversões disponíveis
-- Decimal → Binário / Octal / Hexadecimal  
-- Binário → Decimal / Octal / Hexadecimal  
-- Octal → Decimal / Binário / Hexadecimal  
-- Hexadecimal → Decimal / Binário / Octal  
+### Exemplos:
+- Decimal → Binário, Octal, Hexadecimal  
+- Binário → Decimal, Octal, Hexadecimal  
+- Octal → Decimal, Binário, Hexadecimal  
+- Hexadecimal → Decimal, Binário, Octal  
 
 ---
 
 ## 📜 Histórico
 
-- Armazena todas as operações realizadas na calculadora
-- Permite:
-  - Visualizar histórico
-  - Limpar histórico
+- Armazena todas as operações realizadas
+- Exibe de forma organizada
+- Permite limpar o histórico
 
 ---
 
-## ✅ Validação de Entrada
+## 🧩 Estrutura Modular
 
-O programa possui diversas validações para evitar erros:
+### 🔹 `main.py`
+Responsável por:
+- Interface com o usuário
+- Menus
+- Entrada de dados
+- Controle do fluxo do programa
 
-- Números inválidos (`try/except`)
-- Operadores incorretos
-- Opções de menu inválidas
-- Respostas diferentes de `s/n`
-- Verificação de números binários válidos
+### 🔹 `calculos.py`
 
----
+Contém:
 
-# ⚙️ Tecnologias utilizadas
+#### Função `calc()`
+```python
+calc(p1, m1, v1, o1, p2, m2, v2)
 
-- **Python 3**
-- Estrutura `while`
-- Estrutura `match case`
-- Tratamento de exceções (`try/except`)
-- Listas (`list`)
-- Manipulação de strings
+Responsável por:
 
----
+Aplicar modificadores
+Executar a operação matemática
+Função convert()
+convert(tipo, valor)
 
-# 📂 Estrutura do Menu
+Responsável por:
 
-Menu principal:
-
-| Opção | Função |
-|------|------|
-| 1 | Calculadora |
-| 2 | Histórico |
-| 3 | Conversão de bases |
-| 4 | Finalizar |
-
----
-
-# ▶️ Como executar
-
-## 1️⃣ Clonar o repositório
-
-```bash
+Converter números entre diferentes bases
+⚙️ Tecnologias utilizadas
+Python 3
+Estrutura match case
+Modularização com import
+Listas (list)
+Funções
+Conversão de bases (bin(), oct(), hex())
+▶️ Como executar
+1️⃣ Clonar o repositório
 git clone https://github.com/seu-usuario/seu-repositorio.git
 2️⃣ Acessar a pasta
 cd seu-repositorio
@@ -103,43 +111,38 @@ cd seu-repositorio
 python main.py
 💻 Exemplos de uso
 🧮 Calculadora
-Insira a ação:
-1-Calcular
+Insira o primeiro número: 9
+Modificador: \|
+Resultado: 3
 
-Insira o primeiro digito: 10
-Insira o operador: +
-10 + 5
-
-10 + 5 = 15
+3 + 2 = 5
 🔄 Conversão
-Tipo do número:
-1-Decimal
-
+Tipo: Decimal
 Número: 10
 
-Converter para:
-2-Binário
-
-Resultado: 1010
+Resultado:
+Binario: 1010
+Octal: 12
+Hexadecimal: A
 🗂 Exemplo de histórico
-[10, '+', 5, '=', 15, '||', 15, '*', 2, '=', 30, '||']
+9\| + 2 = 5
+5**2 * 3 = 75
 🚀 Possíveis melhorias
-Evitar divisão por zero
+Tratar divisão por zero
 Melhorar interface do terminal
 Criar interface gráfica (GUI)
 Salvar histórico em arquivo
-Organizar código em funções
+Separar ainda mais funções
 Adicionar testes automatizados
 🧠 Objetivo do projeto
 
 Este projeto foi desenvolvido para praticar:
 
+Modularização em Python
+Organização de código
 Lógica de programação
-Estruturas de repetição
-Estruturas condicionais
-Manipulação de números
-Conversão entre bases numéricas
-Tratamento de erros
+Conversão de bases numéricas
+Manipulação de entrada do usuário
 👨‍💻 Autor
 
-Projeto desenvolvido para estudo de Python e algoritmos.
+Projeto desenvolvido para estudo de Python, algoritmos e boas práticas de programação.
