@@ -150,3 +150,4 @@ A interface contém:
 Projeto desenvolvido para prática de **Python, lógica de programação, interface gráfica e modularização**.
 
 ```
+
